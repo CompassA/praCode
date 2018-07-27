@@ -36,7 +36,7 @@ int main() {
 		int count = 0;
 		generate(P, occur, 0, i, count);
 		
-		printf("%d»Êºó£º%d\n", i, count);
+		printf("%d  %d\n", i, count);
 	}
 	return 0;
 } 
