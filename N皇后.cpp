@@ -35,7 +35,6 @@ int main() {
 		vector<int> P, occur(20, 0);
 		int count = 0;
 		generate(P, occur, 0, i, count);
-		
 		printf("%d  %d\n", i, count);
 	}
 	return 0;
