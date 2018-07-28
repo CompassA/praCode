@@ -14,10 +14,8 @@ vector<int> prime;
 vector<Factor> result;
 vector<int> nums(100001, 0);
 
- 
-
 int main() {
-	
+	//构造素数表
 	for (int i = 2; i < nums.size(); ++i) {
 		if (nums[i] == 0) {
 			for (int j = i + i; j < nums.size(); j += i) nums[j] = 1;
@@ -27,6 +25,10 @@ int main() {
 	
 	int N, Ncopy;
 	scanf("%d", &N);
+	if (N==1) {
+		printf("1=1\n");
+		return 0; 
+	}
 	int limit = (int)sqrt(1.0 * N);
 	Ncopy = N;
 	
@@ -46,10 +48,6 @@ int main() {
 		++result[result.size()-1].n;
 	}
 	
-	if (N==1) {
-		printf("1=1\n");
-		return 0; 
-	}
 	int size = result.size() - 1;
 	printf("%d=", Ncopy); 
 	for (int i = 0; i <= size; ++i) {
