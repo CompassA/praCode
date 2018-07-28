@@ -9,14 +9,10 @@ struct bign {
 	int num[3000];
 	int len;
 	
-	bign(): len(0) {
-		fill(num, num + 1500, 0);
-	}
+	bign(): len(0) { fill(num, num + 1500, 0); }
 	
 	void print() {
-		for (int i = len-1; i >= 0; --i) {
-			printf("%d", num[i]);
-		}
+		for (int i = len-1; i >= 0; --i) printf("%d", num[i]);
 		printf("\n");
 	}
 };
