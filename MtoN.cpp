@@ -17,7 +17,7 @@ struct bign {
 	int num[1500];
 	int len;
 	
-	bign():len(0) {fill(num, num+1500, 0);}
+	bign():len(0) { fill(num, num+1500, 0); }
 	
 	void print() {
 		for (int i = len-1; i >=0; --i) printf("%c", myItos(num[i]));
@@ -37,6 +37,8 @@ bool isZero(const bign& d) {
 	return d.len == 1 && d.num[d.len-1] == 0;
 }
 
+
+//d是M进制的数 除数N, 余数r
 bign divide(const bign &d, const int &M, const int &N, int &r) {
 	bign result;
 	result.len = d.len;
