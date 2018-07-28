@@ -1,21 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
-#include <time.h>
 #include <vector>
 #include <algorithm>
 using namespace std;
-/*int nums[n];
-scanf("%d", &n);
-for (int i = 0; i < n; ++i) scanf("%d", &nums[i]);
 
-输入 3     1 2 3 （按回车） 
-和
-输入 3 (按回车)
-	 1 2 3
-	 （按回车） 
-有区别吗？ 
-*/ 
 int partition(vector<int> &nums, int left, int right) {
 	int p = round(1.0*rand()/RAND_MAX*(right-left)+left);
 	swap(nums[p], nums[left]);
