@@ -6,7 +6,7 @@
 #include <math.h>
 using namespace std;
 
-int partion(vector<int> &nums, int left, int right) {
+int partition(vector<int> &nums, int left, int right) {
 	int p = round(1.0*rand()/RAND_MAX*(right-left)+left);
 	swap(nums[p], nums[left]);
 	int tmp = nums[left];
@@ -22,7 +22,7 @@ int partion(vector<int> &nums, int left, int right) {
 
 void quickSort(vector<int> &nums, int left, int right) {
 	if (left < right) {
-		int pos = partion(nums, left, right);
+		int pos = partition(nums, left, right);
 		quickSort(nums, left, pos - 1);
 		quickSort(nums, pos+1, right);
 	}
